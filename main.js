@@ -3,6 +3,15 @@ let previous = document.querySelector("#previous-button");
 let next = document.querySelector("#next-button");
 let wordContainer = document.querySelector("#word-container");
 let count = document.querySelector("#count");
+let start = document.querySelector(".start")
+let mainContainer = document.querySelector("#main-container") 
+let firstContainer = document.querySelector("#first-container")
+
+start.addEventListener("click", () =>{
+  mainContainer.style.display = "block";
+  firstContainer.style.display = "none";
+  console.log("start is active")
+})
 
 let i = 1;
 fetch("words.json")

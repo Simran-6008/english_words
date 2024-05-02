@@ -1,24 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
 
-#main-container{
-    display: block;
-    margin: auto;
-    height: 370px;
-    width: 80%;
-    background-color: whitesmoke;
+body{
     text-align: center;
+    background-color: rgb(220, 187, 53);
+    font-family: "Mochiy Pop One";
 }
-
 #word-container{
     display: block;
     margin: auto;
     height: 100px;
     width: 80%;
-    background-color: palevioletred;
+    background-color: rgb(244, 202, 216);
 }
+
 button{
     margin: 10px;
 }
 #texts{
-    font-size: 5em;
-    font-weight: 700;
+    font-size: 3em;
+    font-weight: 400;
+}
+#count{
+    background-color: aquamarine;
+    font-size: 3em;
+}
+#main-container{
+    display: none;
+}
+#first-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#first-container h1{
+    font-size: 1.5em;
+}
+#first-container img{
+    max-height: 350px;
 }

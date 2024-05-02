@@ -1,0 +1,24 @@
+
+#main-container{
+    display: block;
+    margin: auto;
+    height: 370px;
+    width: 80%;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+#word-container{
+    display: block;
+    margin: auto;
+    height: 100px;
+    width: 80%;
+    background-color: palevioletred;
+}
+button{
+    margin: 10px;
+}
+#texts{
+    font-size: 5em;
+    font-weight: 700;
+}

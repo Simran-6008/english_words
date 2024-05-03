@@ -32,7 +32,7 @@ fetch("words.json")
   );
 
 let readText = new SpeechSynthesisUtterance();
-wordContainer.addEventListener("click", function (e) {
+texts.addEventListener("click", function (e) {
   readText.text = e.target.innerHTML;
   window.speechSynthesis.speak(readText);
   console.log(readText.text);

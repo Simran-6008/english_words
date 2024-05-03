@@ -1,19 +1,16 @@
 let texts = document.querySelector("#texts");
 let previous = document.querySelector("#previous-button");
 let next = document.querySelector("#next-button");
-let wordContainer = document.querySelector("#word-container");
+let wordContainer = document.querySelector(".word-container");
 let count = document.querySelector("#count");
-let start = document.querySelector(".start")
+let start = document.querySelector(".pushable")
 let mainContainer = document.querySelector("#main-container") 
 let firstContainer = document.querySelector("#first-container")
+let gallery = document.querySelector(".gallery")
+let front = document.querySelector(".front")
+let startText = document.querySelector("#start-button")
 
-start.addEventListener("click", () =>{
-  mainContainer.style.display = "block";
-  firstContainer.style.display = "none";
-  console.log("start is active")
-})
-
-let i = 1;
+let i = 0;
 fetch("words.json")
   .then((response) => response.json())
   .then(
@@ -22,13 +19,15 @@ fetch("words.json")
         i++;
         if (i > 9800) i = 0;
         texts.innerHTML = data[i];
-        count.innerHTML = i;
+        count.innerHTML = "Word No." + " "+ i;
+        previous.style.display = "block";
+        startText.innerHTML = "Next"
       }) +
       previous.addEventListener("click", () => {
         i--;
-        if (i < 0) i = 0;
+        if (i < 1) i = 1;
         texts.innerHTML = data[i];
-        count.innerHTML = i;
+        count.innerHTML = "Word No." + " "+ i;
       })
   );
 

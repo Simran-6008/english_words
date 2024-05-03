@@ -1,40 +1,86 @@
 @import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
 
-body{
+body {
     text-align: center;
     background-color: rgb(220, 187, 53);
     font-family: "Mochiy Pop One";
 }
-#word-container{
+
+.pushable {
+    background: #1375E4;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+#word-container {
     display: block;
     margin: auto;
     height: 100px;
     width: 80%;
-    background-color: rgb(244, 202, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    margin-bottom: 20px;
 }
 
-button{
+.front {
+    display: block;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: #59CDFF;
+    font-family: 'Mochiy Pop One';
+    text-shadow: 0px 1px 0px #367DCA;
+    color: white;
+    transform: translateY(-6px);
+}
+
+
+button {
     margin: 10px;
 }
-#texts{
+
+#texts {
     font-size: 2em;
     font-weight: 400;
-}
-#count{
-    background-color: aquamarine;
-    font-size: 3em;
-}
-#main-container{
-    display: none;
-}
-#first-container{
-    display: flex;
-    flex-direction: column;
+    text-shadow: 0px 1px 0px #f03d3d;
 }
 
-#first-container h1{
+#count {
     font-size: 1.5em;
 }
-#first-container img{
-    max-height: 350px;
+
+
+#previous-button {
+    display: none;
+}
+
+.main-button-container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width:481px) {
+    .main-button-container {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width:566px) {
+    #texts {
+        font-size: 2em;
+    }
+}
+
+@media (min-width:1024px) {
+    #texts {
+        font-size: 3em;
+    }
 }

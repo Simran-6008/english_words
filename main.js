@@ -10,6 +10,15 @@ let gallery = document.querySelector(".gallery")
 let front = document.querySelector(".front")
 let startText = document.querySelector("#start-button")
 
+let synth = window.speechSynthesis;
+let voices = [];
+
+PopulateVoices();
+
+if(speechSynthesis !== undefined){
+  speechSynthesis.onvoiceschanged = PopulateVoices;
+}
+
 let i = 0;
 fetch("words.json")
   .then((response) => response.json())
@@ -31,9 +40,15 @@ fetch("words.json")
       })
   );
 
-let readText = new SpeechSynthesisUtterance();
+
 texts.addEventListener("click", function (e) {
-  readText.text = e.target.innerHTML;
-  window.speechSynthesis.speak(readText);
-  console.log(readText.text);
+  let toSpeak = new SpeechSynthesisUtterance(e.target.textContent);
+  toSpeak.voice = voices[7]; 
+  toSpeak.rate = 0.7;
+  synth.speak(toSpeak);
 });
+
+
+function PopulateVoices(){
+  voices = synth.getVoices();
+}

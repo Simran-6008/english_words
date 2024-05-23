@@ -5,6 +5,19 @@ body {
     background-color: rgb(220, 187, 53);
     font-family: "Mochiy Pop One";
 }
+#input-container{
+    display: none;
+}
+
+input{
+    min-height: 30px;
+    margin: 20px;
+}
+
+.go-button{
+    min-height: 30px;
+    width: 50px;
+}
 
 img{
     height: 150px;

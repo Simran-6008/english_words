@@ -56,7 +56,6 @@ fetch("words.json")
           i = numberInput.value
           numberInput.value = ""
         }
-
       })
   );
 

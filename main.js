@@ -47,20 +47,16 @@ fetch("words.json")
         count.innerHTML = "Word No." + " " + i;
       }) +
       goBUtton.addEventListener("click", () => {
-        count.innerHTML = "Word No." + " " + numberInput.value
-        texts.innerHTML = data[numberInput.value]
-        //numberInput.value = ""
-        //console.log(data[numberInput.value])
-        // next.addEventListener("click", () => {
-        //   i++;
-        //   if (i > 9800) i = 0;
-        //   texts.innerHTML = data[numberInput.value];
-        //   count.innerHTML = "Word No." + " " + numberInput.value;
-        //   console.log("Word No." + " " + numberInput.value)
-  
-        // }) 
-         i = numberInput.value
-         numberInput.value = ""
+        if (numberInput.value > 9800) {
+          count.innerHTML = "Please put num. less than 9800"
+          texts.innerHTML = "Invalid number"
+        } else {
+          count.innerHTML = "Word No." + " " + numberInput.value
+          texts.innerHTML = data[numberInput.value];
+          i = numberInput.value
+          numberInput.value = ""
+        }
+
       })
   );
 

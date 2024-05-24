@@ -47,10 +47,15 @@ fetch("words.json")
         count.innerHTML = "Word No." + " " + i;
       }) +
       goBUtton.addEventListener("click", () => {
-        count.innerHTML = "Word No." + " " + numberInput.value
-        texts.innerHTML = data[numberInput.value]
-         i = numberInput.value
-         numberInput.value = ""
+        if (numberInput.value > 9800) {
+          count.innerHTML = "Please put num. less than 9800"
+          texts.innerHTML = "Invalid number"
+        } else {
+          count.innerHTML = "Word No." + " " + numberInput.value
+          texts.innerHTML = data[numberInput.value];
+          i = numberInput.value
+          numberInput.value = ""
+        }
       })
   );
 

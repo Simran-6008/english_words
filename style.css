@@ -90,3 +90,14 @@ button {
         font-size: 3em;
     }
 }
+
+.allwords-div{
+    font-size: xx-large;
+    text-align: start;
+    margin: 20px;
+}
+
+.show-allWords{
+font-size: 20px;
+color: blue;
+}
